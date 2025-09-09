@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: member-svc
+  namespace: delivery
+spec:
+  type: ClusterIP
+  selector: #pod의 라벨 선택( deploy의 template의 label )
+    app: member-app
+  ports:
+  - port: 10000 # service가 노출하는 포트
+    targetPort: 80 # 연결 될 pod의 port 정의
