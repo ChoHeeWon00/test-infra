@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: member
-        image: choheewon00/front_site:1.0
+        image: choheewon00/front_site:1.1
         ports:
         - containerPort: 80
         resources:
